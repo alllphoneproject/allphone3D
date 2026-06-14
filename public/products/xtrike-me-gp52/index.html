@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050609">
+  <title>Xtrike Me GP-52 Wireless Controller - Interactive 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <canvas id="scene" aria-label="Interactive 3D Xtrike Me GP-52 wireless controller"></canvas>
+    <div class="ambient-grid"></div>
+    <div id="hotspots" aria-live="polite"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">X</span>
+        <div>
+          <strong>XTRIKE ME GP-52</strong>
+          <span>WIRELESS CONTROLLER / INTERACTIVE 3D</span>
+        </div>
+      </div>
+      <div class="power-status" id="power-status">
+        <span class="status-light"></span>
+        <span id="power-status-text">POWER OFF</span>
+      </div>
+    </header>
+
+    <nav class="toolbar" aria-label="Controller viewer tools">
+      <button id="power-button" class="tool primary" title="Turn controller on or off">
+        <span class="tool-icon">PWR</span><span>Power</span>
+      </button>
+      <button id="lights-button" class="tool" title="Use the controller light switch">
+        <span class="tool-icon">RGB</span><span>Lights</span>
+      </button>
+      <button id="guide-button" class="tool" title="Show interactive control labels">
+        <span class="tool-icon">i</span><span>Guide</span>
+      </button>
+      <button id="front-button" class="tool compact" title="Front view"><span>Front</span></button>
+      <button id="back-button" class="tool compact" title="Back view"><span>Back</span></button>
+      <button id="reset-button" class="tool icon-only" title="Reset camera" aria-label="Reset camera">R</button>
+      <button id="fullscreen-button" class="tool icon-only" title="Fullscreen" aria-label="Fullscreen">F</button>
+    </nav>
+
+    <section id="control-info" class="control-info">
+      <span class="eyebrow">PRODUCT EXPERIENCE</span>
+      <h1 id="control-title">Double-click the package</h1>
+      <p id="control-description">Open the retail box to reveal the GP-52 controller.</p>
+      <div class="activity-row">
+        <span id="activity-pill">SEALED</span>
+        <span id="light-mode-label">RGB: OFF</span>
+      </div>
+    </section>
+
+    <div id="loading" class="loading-screen">
+      <div class="loader-ring"></div>
+      <strong>PREPARING GP-52</strong>
+      <span id="loading-text">Loading controller and retail package...</span>
+    </div>
+  </main>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/OrbitControls.js"></script>
+  <script src="vendor/GLTFLoader.js"></script>
+  <script src="model-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "Allphone 3D Product Gallery",
+  "description": "Interactive 3D product modeling workspace for BeeTech Call Recorder and XTRIKE ME GP-52 Wireless Controller demos.",
+  "requestFramePermissions": ["microphone"]
+}
