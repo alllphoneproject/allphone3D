@@ -188,7 +188,7 @@
     root.position.sub(center);
     root.position.add(controllerTargetPosition);
     root.scale.copy(controllerTargetScale);
-    root.rotation.x = -Math.PI / 2;
+    root.rotation.x = Math.PI / 2;
     root.visible = false;
     scene.add(root);
 
@@ -234,7 +234,7 @@
     root.position.sub(box.getCenter(new THREE.Vector3()));
     root.position.add(packageStartPosition);
     root.scale.copy(packageStartScale);
-    root.rotation.x = -Math.PI / 2;
+    root.rotation.x = Math.PI / 2;
     root.traverse((object) => {
       if (object.isMesh) {
         object.castShadow = true;
@@ -426,7 +426,7 @@
     packageRoot.position.lerpVectors(packageStartPosition, packageRestPosition, eased);
     packageRoot.scale.lerpVectors(packageStartScale, packageRestScale, eased);
     packageRoot.rotation.y = -.42 * eased;
-    packageRoot.rotation.x = -Math.PI / 2 + .12 * eased;
+    packageRoot.rotation.x = Math.PI / 2 - .12 * eased;
     controllerRoot.position.lerpVectors(controllerStartPosition, controllerTargetPosition, eased);
     controllerRoot.scale.lerpVectors(controllerStartScale, controllerTargetScale, eased);
     if (t >= 1) {
